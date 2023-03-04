@@ -1,0 +1,19 @@
+body {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: #ffd2ba;}
+h1, h2 {color:#1966F0;} 
+p, h3, ul, hr, caption, th, label, option {color:#5C3787;}
+td {color: #FFFFFF;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+a:link {color: #DD3558;}
+a:hover {color: #C5286F;}
+a:visited {color:  #b380cc;}
+nav {background-color: #FB784C;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+nav a:link {color: #FFFFFF;}
+nav a:hover { color: #ebf4ff;
+    background-color:  #C5286F;
+}
+.evenrow {background-color: #b380cc;}
