@@ -38,6 +38,12 @@ a {color:#C5286F;}
     padding: 1em;
     flex: 1;}
 .parenttag1 {display: flex; flex-wrap: wrap;}
+.icon1 {flex: 3; order: 1;}
+.icon2 {flex: 3; order: 2;}
+.icon3 {flex: 2; order: 3;}
+.icon4 {flex: 2; order: 4;}
+.icon5 {flex: 1; order: 5;}
+.otherskills1 {flex: 1;}
 .otherskillstitle {float: inline-start;
                     padding-right: 5px;}
 .intro1 {display: flex;
