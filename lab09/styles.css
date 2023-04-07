@@ -36,7 +36,7 @@ aside {
     color: white;
     border-radius: 1em;
     padding: 1em;
-flex-basis: 25%;}
+flex-basis: 75%;}
 .parenttag1 {display: flex;
             justify-content: space-between;
             margin: 10px;}
