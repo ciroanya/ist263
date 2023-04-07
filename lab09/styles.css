@@ -34,9 +34,10 @@ a {color:#C5286F;}
 .otherskills1 {
     background-color: #5C3787;
     color: white;
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;}
+    border-radius: 1em;
+    padding: 1em;
+    margin: 10px;
+display: flex;}
 .parenttag1 {display: flex;
             justify-content: space-between;
             margin: 10px;}
