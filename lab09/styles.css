@@ -29,8 +29,7 @@ a {color:#C5286F;}
 .a2 {background-color: #FFFFFF; border-radius: 1em; padding: 11px;}
 .pageheading {display: flex;
             justify-content: center;}
-.row1 {display: flex;
-        flex:3;}
+.row1 {display: flex;}
 .otherskills1 {
     background-color: #5C3787;
     color: white;
@@ -45,6 +44,6 @@ flex: 1;}
 .intro1 {display: flex;
         width: 75%;
         padding-left: 40px;}
-.icon1, .icon2, .icon3, .icon4, .icon5 {padding: 3em;}
+.icon1, .icon2, .icon3, .icon4, .icon5 {padding: 3.5em;}
 
 
