@@ -30,13 +30,13 @@ a {color:#C5286F;}
 .pageheading {display: flex;
             justify-content: center;}
 .row1 {display: flex;
-        flex:1;}
-.otherskills {
+        flex:3;}
+.otherskills1 {
     background-color: #5C3787;
     color: white;
-    border-radius: 1em;
-    padding: 1em;
-    flex:1;}
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;}
 .parenttag1 {display: flex;
             justify-content: space-between;
             margin: 10px;}
