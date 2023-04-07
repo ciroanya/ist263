@@ -37,9 +37,7 @@ a {color:#C5286F;}
     border-radius: 1em;
     padding: 1em;
     flex: 1;}
-.parenttag1 {display: flex;
-            justify-content: space-between;
-            margin: 10px;}
+.parenttag1 {display: flex; flex-wrap: wrap;}
 .otherskillstitle {float: inline-start;
                     padding-right: 5px;}
 .intro1 {display: flex;
