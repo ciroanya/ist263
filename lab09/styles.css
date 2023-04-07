@@ -36,7 +36,7 @@ a {color:#C5286F;}
     color: white;
     border-radius: 1em;
     padding: 1em;
-display: flex;}
+flex: 1;}
 .parenttag1 {display: flex;
             justify-content: space-between;
             margin: 10px;}
