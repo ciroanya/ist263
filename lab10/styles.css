@@ -22,11 +22,11 @@ a {color:#C5286F;}
 .a1 {display: flex;}
 .address {flex: 1;}
 .contactlinks {flex: 1;}
-.a1 {background-color: #FFFFFF; border-radius: 1em; padding: 11px;}
+.a1 {background-color: #FFFFFF; border-radius: 1em; padding: 12px;}
 .a2 {display: flex;}
 .form1 {flex: 1;}
 .map {flex: 1;}
-.a2 {background-color: #FFFFFF; border-radius: 1em; padding: 11px;}
+.a2 {background-color: #FFFFFF; border-radius: 1em; padding: 12px;}
 .pageheading {display: flex;
             justify-content: center;}
 .row1 {display: flex;
