@@ -29,8 +29,9 @@ a {color:#C5286F;}
 .a2 {background-color: #FFFFFF; border-radius: 1em; padding: 11px;}
 .pageheading {display: flex;
             justify-content: center;}
-.row1 {display: flex;}
-.otherskills1 {
+.row1 {display: flex;
+        flex:3;}
+.aside {
     background-color: #5C3787;
     color: white;
     border-radius: 1em;
