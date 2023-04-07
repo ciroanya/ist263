@@ -1,0 +1,50 @@
+body {font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+background-color: #ffd2ba;}
+h1, h2 {color:#1966F0;} 
+p, h3, ul, hr, caption, th, label, option, span {color:#5C3787;}
+td {color: #FFFFFF;}
+h1 {font-size: 2em;}
+h2 {font-size: 1.5em;}
+a:link {color: #DD3558;}
+a:hover {color: #C5286F;}
+a:visited {color:  #b380cc;}
+nav {background-color: #FB784C;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+nav a:link {color: #FFFFFF;}
+nav a:hover { color: #ebf4ff;
+    background-color:  #C5286F;
+}
+.evenrow {background-color: #b380cc;}
+form {color:#ebf4ff;}
+a {color:#C5286F;}
+.a1 {display: flex;}
+.address {flex: 1;}
+.contactlinks {flex: 1;}
+.a1 {background-color: #FFFFFF; border-radius: 1em; padding: 11px;}
+.a2 {display: flex;}
+.form1 {flex: 1;}
+.map {flex: 1;}
+.a2 {background-color: #FFFFFF; border-radius: 1em; padding: 11px;}
+.pageheading {display: flex;
+            justify-content: center;}
+.row1 {display: flex;
+        flex:3;}
+.otherskills1 {
+    background-color: #5C3787;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    flex: 1;}
+.parenttag1 {display: flex;
+            justify-content: space-between;
+            margin: 10px;}
+.otherskillstitle {float: inline-start;
+                    padding-right: 5px;}
+.intro1 {display: flex;
+        width: 75%;
+        padding-left: 40px;}
+.icon1, .icon2, .icon3, .icon4, .icon5 {padding: 3.5em;}
+
+
