@@ -31,13 +31,12 @@ a {color:#C5286F;}
             justify-content: center;}
 .row1 {display: flex;
         flex:3;}
-.otherskills1 {
+aside {
     background-color: #5C3787;
     color: white;
     border-radius: 1em;
     padding: 1em;
-    display: flex;
-flex: 1;}
+margin: 10px;}
 .parenttag1 {display: flex;
             justify-content: space-between;
             margin: 10px;}
