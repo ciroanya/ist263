@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Logo and Search Bar Example</title>
+        <style>
+                /* Logo image styles */
+                .logo {
+                        float: left;
+                        width: 150px;
+                        height: 100px;
+                        background-color: #fbb600;
+                        margin-right: 10px;
+                }
+
+                /* Search bar styles */
+                .search {
+                        float: right;
+                        margin-top: 30px;
+                }
+
+                .search input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
+
+                .search input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
+        </style>
+</head>
+<body>
+        <header>
+                <div class="logo"></div>
+                <div class="search">
+                        <input type="text" placeholder="Search...">
+                </div>
+        </header>
+        <!-- Rest of the webpage content goes here -->
+</body>
+</html>
