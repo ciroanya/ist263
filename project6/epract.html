@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <title>Intro Image and Related Links</title>
+        <style>
+                body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                }
+
+                .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 50px;
+                }
+
+                .intro-image {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        margin-right: 50px;
+                }
+
+                .intro-image img {
+                        display: block;
+                        max-width: 100%;
+                        height: auto;
+                }
+
+                .intro-paragraph {
+                        flex: 1 1 auto;
+                }
+
+                h1 {
+                        font-size: 36px;
+                        margin-bottom: 20px;
+                }
+
+                p {
+                        font-size: 18px;
+                        line-height: 1.5;
+                        margin-bottom: 20px;
+                }
+
+                .related-links {
+                        flex: 0 0 50%;
+                        max-width: 50%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: flex-end;
+                        margin-top: 20px;
+                }
+
+                .related-links a {
+                        display: block;
+                        margin-right: 20px;
+                        font-size: 16px;
+                        color: #333;
+                        text-decoration: none;
+                        transition: all 0.2s ease-in-out;
+                }
+
+                .related-links a:hover {
+                        color: #fbb600;
+                }
+        </style>
+</head>
+<body>
+        <div class="container">
+                <div class="intro-image">
+                        <img src="intro-image.jpg" alt="Intro Image">
+                </div>
+                <div class="intro-paragraph">
+                        <h1>Welcome to Our Website</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed auctor, ipsum in ultricies sodales, nunc sapien sagittis mauris, ac venenatis erat est nec enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Praesent euismod malesuada nibh in consequat.</p>
+                </div>
+                <div class="related-links">
+                        <a href="#">Related Article 1</a>
+                        <a href="#">Related Article 2</a>
+                        <a href="#">Related Article 3</a>
+                </div>
+        </div>
+</body>
+</html>
