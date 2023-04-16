@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>My Website</title>
+        <style>
+                body {
+                        background-color: #f2f2f2;
+                }
+                nav {
+                        background-color: #ffffff;
+                        border: 2px solid #ffd700;
+                        padding: 10px;
+                        text-align: center;
+                }
+                nav ul {
+                        display: inline-block;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        text-align: center;
+                }
+                nav li {
+                        display: inline-block;
+                        margin: 0 10px;
+                }
+                nav li a {
+                        color: #000000;
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                        font-weight: bold;
+                        transition: all 0.3s ease-in-out;
+                }
+                nav li a:hover {
+                        background-color: #ffd700;
+                        color: #ffffff;
+                }
+                nav ul ul {
+                        display: none;
+                        position: absolute;
+                        top: 50px;
+                        left: 0;
+                        background-color: #ffffff;
+                        padding: 0;
+                        border: 2px solid #ffd700;
+                        box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+                }
+                nav ul ul li {
+                        display: block;
+                        width: 200px;
+                        margin: 0;
+                }
+                nav ul ul li a {
+                        color: #000000;
+                        display: block;
+                        padding: 10px 15px;
+                        text-decoration: none;
+                        font-weight: normal;
+                        transition: all 0.3s ease-in-out;
+                }
+                nav ul ul li a:hover {
+                        background-color: #ffd700;
+                        color: #ffffff;
+                }
+                nav li:hover > ul {
+                        display: block;
+                }
+        </style>
+</head>
+<body>
+        <nav>
+                <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a>
+                                <ul>
+                                        <li><a href="#">Our Company</a></li>
+                                        <li><a href="#">Our Team</a></li>
+                                        <li><a href="#">Our Values</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                </ul>
+        </nav>
+</body>
+</html>
