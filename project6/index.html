@@ -155,6 +155,62 @@
                         color: #fbb600;
                 }
                 .pgreen {color: green;}
+
+.related-articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.article {
+  width: 300px;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.article:last-child {
+  margin-right: 0;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+}
+
+.article h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.article p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.article .button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.article .share {
+  margin-top: 10px;
+}
+
+.article .share-icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.article .share-icon img {
+  width: 30px;
+  height: 30px;
+}
 </style>
 </head>
 <body>
@@ -232,38 +288,55 @@
     </main>
     <hr style="border-top: 1.5px solid yellow;">
     <br>
-    <section>
-        <h2>Related Articles</h2>
-        <article>
-            <h3>Easy Homemade Pounded Yam and Egusi Soup!</h3>
-            <img src="../siteimages/14692608750_3684cbeb5e_b.jpg" alt="pounded yam and egusi soup in a bowl" width="320">
-            <p>A staple dish in Nigeria, made from yam, ground melon seeds. palm oil vegetables, and spices. It is a hearty and filling dish that is commonly served at… 
-            </p>
-            <a href="#">Read More</a>
-          </article>
-          <article>
-            <h3>How to Make the Most Flavorful Suya!</h3>
-            <img src="../siteimages/24Nigerian4-promo-superJumbo-v2.jpg" alt="beef suya covered in spices, onions, and red peppers" width="320">
+<section>
+    <h2>Related Articles</h2>
+    <div class="related-articles">
+        <div class="article">
+            <img src="../siteimages/14692608750_3684cbeb5e_b.jpg" alt="pounded yam and egusi soup in a bowl">
+            <h2>Easy Homemade Pounded Yam and Egusi Soup!</h2>
+            <p>A staple dish in Nigeria, made from yam, ground melon seeds. palm oil vegetables, and spices. It is a hearty and filling dish that is commonly served at… </p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="favorite-media-icon-1.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-2.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-3.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-1.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-2.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-3.png" alt="Share via Email"></a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../siteimages/24Nigerian4-promo-superJumbo-v2.jpg" alt="beef suya covered in spices, onions, and red peppers">
+            <h2>How to Make the Most Flavorful Suya!</h2>
             <p>A popular street food made from thin slices of meat (usually chicken or beef) that are marinated in spices and grilled over hot coals…</p>
-            <a href="#">Read More</a>
-          </article>
-          <article>
-            <h3>Miya Lounge, located in Beltsville Maryland</h3>
-            <img src="../siteimages/IMG_5737.jpg" alt="front of restaurant Miya Lounge in Beltsville, MD" width="320">
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="favorite-media-icon-1.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-2.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-3.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-1.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-2.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-3.png" alt="Share via Email"></a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../siteimages/IMG_5737.jpg" alt="front of restaurant Miya Lounge in Beltsville, MD">
+            <h2>Miya Lounge, located in Beltsville Maryland</h2>
             <p>Nigerian restaurants in America offer a taste of authentic Nigerian cuisine, which is characterized by bold and ravorful spices, savory stews, and…</p>
-            <a href="#">Read More</a>
-          </article>
-    </section>
-    <aside>
-		<h2>Related Posts</h2>
-		<ul>
-			<li><a href="#">How to Make the Tastiest Jollof Rice</a></li>
-			<li><a href="#">Easy Guide for Making Akara</a></li>
-			<li><a href="#">Delicious and Easy Boli and Shaki</a></li>
-			<li><a href="#">Easy Homemade Moi Moi</a></li>
-            <li><a href="#">Top 10 Nigerian Cuisine Restaurants in the U.S.!</a></li>
-		</ul>
-	</aside>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="favorite-media-icon-1.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-2.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-3.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-1.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-2.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-icon"><img src="social-media-icon-3.png" alt="Share via Email"></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <section>
         <h2>SUBSCRIBE TO MY NEWSLETTER!</h2>
         <p>Let's connect! You won't want to miss out on any new blog posts. Stay up-to-date with the latest Nigerian food news, recipes, and tips. </p>
