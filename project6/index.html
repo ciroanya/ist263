@@ -81,7 +81,20 @@
         .search {
                         float: right;
                 }
+                .search input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
 
+                .search input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
 </style>
 </head>
 <body>
@@ -92,11 +105,10 @@
             </div>
             <br>
             <div class="search">
-                <form>
                   <input type="text" placeholder="Search...">
-                  <button type="submit">Search</button>
-                </form>
               </div>
+
+
         <h1> Explore NaijaFlavor</h1>
         <nav>
             <ul>
