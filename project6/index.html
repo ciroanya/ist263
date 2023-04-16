@@ -6,6 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NaijaFlavor | Home</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style for navigation bar */
+        nav {
+                background-color: white;
+                border: 2px solid yellow;
+                color: black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+        }
+        nav ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+        }
+        nav li {
+                margin-right: 20px;
+                position: relative;
+        }
+        nav a {
+                color: black;
+                text-decoration: none;
+                padding: 10px;
+                display: block;
+        }
+        nav ul ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: green;
+                padding: 0;
+        }
+        nav ul ul li {
+                margin-right: 0;
+                width: 200px;
+                border-bottom: 1px solid #fff;
+        }
+        nav ul ul li:last-child {
+                border-bottom: none;
+        }
+        nav li:hover > ul {
+                display: block;
+        }
+</style>
 </head>
 <body>
     <header>
@@ -22,17 +69,25 @@
         <h1> Explore NaijaFlavor</h1>
         <nav>
             <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="recipes.html">Recipes</a></li>
-              <li><a href="restaurants.html">Restaurants to Visit</a></li>
+                <li><a href="index.html">Home</a></li>  
+                <li>
+                    <a href="recipes.html">Recipes</a>
+                    <ul>
+                        <li><a href="#">Jollof Rice</a></li>
+                        <li><a href="#">Pounded Yam and Egusi Soup</a></li>
+                        <li><a href="#">Afang Soup</a></li>
+                        <li><a href="#">Boli and Shaki</a></li>
+                        <li><a href="#">Akara</a></li>
+                        <li><a href="#">Suya</a></li> 
+                        <li><a href="#">Plantain Porridge</a></li>
+                        <li><a href="#">Moi Moi</a></li>
+                        <li><a href="#">Chin Chin</a></li>
+                        <li><a href="#">Puff Puff</a></li>
+                    </ul>
+                </li>
+                <li><a href="restaurants.html">Restaurants to Visit</a></li>
             </ul>
-          </nav>
-          <div class="search">
-            <form>
-              <input type="text" placeholder="Search...">
-              <button type="submit">Search</button>
-            </form>
-          </div>
+        </nav>
     </header>
     <main>
         <section class="intro">
