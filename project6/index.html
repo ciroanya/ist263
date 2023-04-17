@@ -225,6 +225,23 @@
 			font-weight: bold;
 			margin: 20px auto;
 			cursor: pointer;}
+            .bottomsearch {
+                        float: right;
+                }
+                .bottomsearch input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px yellow;
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
+
+                .bottomsearch input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
 </style>
 </head>
 <body>
@@ -349,6 +366,9 @@
     </div>
 </section>
 <button class="load-more-btn">Load More Posts</button>
+<div class="bottomsearch">
+    <input type="text" placeholder="Type and hit enter...">
+</div>
 
     <section>
         <h2>SUBSCRIBE TO MY NEWSLETTER!</h2>
