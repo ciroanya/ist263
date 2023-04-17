@@ -71,7 +71,7 @@
 			font-weight: bold;
 			margin: 20px auto;
 			cursor: pointer;}
-      
+
       .subscribe-btn {
 			display: inline-block;
 			background-color: #4CAF50;
@@ -92,6 +92,38 @@
 		.subscribe-btn:active {
 			box-shadow: none;
 			transform: translateY(2px);
+		}
+    .email-form {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 50px 0;
+		}
+		
+		.email-input {
+			padding: 10px;
+			border-radius: 5px 0 0 5px;
+			border: none;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			flex: 1;
+		}
+		
+		.subscribe-btn {
+			background-color: green;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 0 5px 5px 0;
+			font-size: 16px;
+			font-family: Arial, sans-serif;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.2s ease-in-out;
+		}
+		
+		.subscribe-btn:hover {
+			background-color: darkgreen;
 		}
     </style>
 </head>
@@ -133,5 +165,9 @@
       </div>
       <button class="load-more-btn">Load More Posts</button>
       <button class="subscribe-btn">Subscribe Now</button>
+      <div class="email-form">
+        <input type="email" placeholder="Enter your email address" class="email-input">
+        <button type="submit" class="subscribe-btn">Subscribe</button>
+      </div>
 </body>
 </html>
