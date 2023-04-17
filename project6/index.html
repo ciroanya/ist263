@@ -256,6 +256,33 @@
         .copyr {float: left;
         color: white;}
 
+        .subscribe-form {
+			display: inline-block;
+			background-color: #e0e0e0;
+			border-radius: 20px;
+			padding: 10px;
+		}
+
+		.subscribe-input {
+			display: inline-block;
+			padding: 5px;
+			border: none;
+			border-radius: 5px;
+			margin-right: 10px;
+			width: 200px;
+		}
+
+		.subscribe-btn {
+			display: inline-block;
+			background-color: green;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
 </style>
 </head>
 <body>
@@ -389,10 +416,10 @@
     <footer>
         <h2 class="subby">SUBSCRIBE TO MY NEWSLETTER!</h2>
         <p><em> Let's connect! You won't want to miss out on any new blog posts. Stay up-to-date with the latest Nigerian food news, recipes, and tips.</em> </p>
-        <form>
-            <input type="email" placeholder="Enter your email address">
-            <button type="submit">Subscribe</button>
-          </form>
+        <div class="subscribe-form">
+            <input type="text" placeholder="Enter your email" class="subscribe-input">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
         <p class="copyr">&copy; 2023 NaijaFlavor. All rights reserved.</p>
       </footer>
 </body>
