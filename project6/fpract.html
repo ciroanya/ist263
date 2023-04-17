@@ -71,6 +71,28 @@
 			font-weight: bold;
 			margin: 20px auto;
 			cursor: pointer;}
+      
+      .subscribe-btn {
+			display: inline-block;
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			font-weight: bold;
+			box-shadow: 2px 2px #888888;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.subscribe-btn:hover {
+			background-color: #3e8e41;
+		}
+
+		.subscribe-btn:active {
+			box-shadow: none;
+			transform: translateY(2px);
+		}
     </style>
 </head>
 <body>
@@ -110,5 +132,6 @@
         </div>
       </div>
       <button class="load-more-btn">Load More Posts</button>
+      <button class="subscribe-btn">Subscribe Now</button>
 </body>
 </html>
