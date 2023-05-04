@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaijaFlavor | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style for navigation bar */
+        nav {
+                background-color: white;
+                border: 2px solid yellow;
+                color: black;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                padding: 5px;
+        }
+
+        nav ul {
+                display: flex;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+        }
+        nav li {
+                margin-right: 20px;
+                position: relative;
+        }
+        nav li a {
+                color: #000000;
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                letter-spacing: 2px;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+                }
+        nav li a:hover {
+                background-color: yellow;
+                color: #ffffff;
+                }
+        nav ul ul {
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                background-color: yellow;
+                padding: 0;
+                box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+        }
+        nav ul ul li {
+                margin-right: 0;
+                width: 200px;
+                border-bottom: 1px solid #fff;
+        }
+        nav ul ul li:last-child {
+                border-bottom: none;
+        }
+        nav ul ul li a {
+                        color: #000000;
+                        display: block;
+                        padding: 10px;
+                        text-decoration: none;
+                        font-weight: normal;
+                        transition: all 0.3s ease-in-out;
+                }
+                nav ul ul li a:hover {
+                        background-color: green;
+                        color: #ffffff;
+                }
+        nav li:hover > ul {
+                display: block;
+        }
+        h1, h2 {color: green;}
+        .logo {
+                        float: left;
+                }
+        .search {
+                        float: right;
+                }
+                .search input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
+
+                .search input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
+                body {
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-size: 16px;
+                        line-height: 1.5;
+                }
+
+
+
+                .container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: stretch;
+                        max-width: 960px;
+                        margin: 0 auto;
+                        padding: 20px;
+                }
+                .intro-image {
+                        flex-basis: 33.333%;
+                        padding-right: 1px;
+                        box-sizing: border-box;
+                }
+                .intro-paragraph {
+                        flex-basis: 33.333%;
+                        padding-left: 1px;
+                        box-sizing: border-box;
+                }
+
+                .intro-paragraph h2 {
+                        font-size: 29px;
+                        margin-top: 0;
+                }
+                .intro-paragraph p {
+                        margin-bottom: 20px;
+                }
+                .related-posts {
+                        flex-basis: 33.333%;
+                        box-sizing: border-box;
+                }
+                .related-posts h2 {
+                        font-size: 24px;
+                        margin-top: 0;
+                }
+                .related-posts ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                }
+                .related-posts li {
+                        margin-bottom: 10px;
+                }
+                .related-posts a {
+                        display: block;
+                        color: darkred;
+                        text-decoration: none;
+                        transition: all 0.2s ease-in-out;
+                }
+                .related-articles a:hover {
+                        color: #fbb600;
+                }
+                .pgreen {color: green;}
+
+.related-articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.article {
+  width: 300px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+}
+
+.article:last-child {
+  margin-right: 0;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+}
+
+.article h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.article p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.article .button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.article .share {
+  margin-top: 10px;
+}
+
+.article .share-icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.article .share-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.article .share-iconz img {
+    width: 30px;
+  height: 30px; 
+}
+.load-more-btn {
+			display: block;
+			background-color: white;
+			color: rgb(77, 77, 77);
+			padding: 10px;
+			border: 2px solid yellow;
+			border-radius: 5px;
+			font-weight: bold;
+			margin: 20px auto;
+			cursor: pointer;}
+            .bottomsearch {
+                display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 20px 0;
+                }
+                .bottomsearch input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px yellow;
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
+
+                .bottomsearch input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
+                footer {
+			background-color: green;
+			color: white;
+			text-align: center;
+			padding: 50px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+        .subby {color: #fff;}
+        .copyr {float: left;
+        color: white;
+        font-size: 12px;}
+
+        .subscribe-form {
+			display: inline-block;
+			background-color: #e0e0e0;
+			border-radius: 20px;
+			padding: 10px;
+		}
+
+		.subscribe-input {
+			display: inline-block;
+			padding: 5px;
+			border: none;
+			border-radius: 5px;
+			margin-right: 10px;
+			width: 200px;
+		}
+
+		.subscribe-btn {
+			display: inline-block;
+			background-color: black;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+        .related-posts {float: left;}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="logo">
+              <a href="#"><img src="../siteimages/naijaflavorlogo.png" alt="NaijaFlavor logo" width="108"></a>
+            </div>
+            <br>
+            <div class="search">
+                  <input type="text" placeholder="Search...">
+            </div>
+        </div>
+
+        <h1> Explore NaijaFlavor</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>  
+                <li>
+                    <a href="recipes.html">RECIPES</a>
+                    <ul>
+                        <li><a href="#">Jollof Rice</a></li>
+                        <li><a href="#">Pounded Yam and Egusi Soup</a></li>
+                        <li><a href="#">Afang Soup</a></li>
+                        <li><a href="#">Boli and Shaki</a></li>
+                        <li><a href="#">Akara</a></li>
+                        <li><a href="#">Suya</a></li> 
+                        <li><a href="#">Plantain Porridge</a></li>
+                        <li><a href="#">Moi Moi</a></li>
+                        <li><a href="#">Chin Chin</a></li>
+                        <li><a href="#">Puff Puff</a></li>
+                    </ul>
+                </li>
+                <li><a href="restaurants.html">RESTAURANTS TO VISIT</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <br>
+    <main>
+        <section class="intro">
+        <div class="container">
+            <div class="intro-image">
+                <img src="../siteimages/thumbnailofme_IMG_4533.jpg" alt="celeste iroanya smiling" width="300">
+            </div>
+            <div class="intro-paragraph">
+                <h2>Nigeria on a Plate</h2>
+                <p>
+                    Hi friends, so glad to have you here! My name is Celeste, and this is the space where I share some of my favorite Nigerian cuisine! I want to showcase the diverse and flavorful dishes of the country, including traditional and modern recipes, cooking techniques, ingredient information, along with some interesting information on the cultural and historical context of Nigerian cuisine.
+                </p>
+                <p>
+                    Nigerian cuisine is more than just sustenance - it is an integral part of the country's rich cultural heritage, reflecting a diverse and fascinating history that spans centuries. Food plays a significant role in Nigerian culture and is often central to social and family gatherings. The communal nature of meal preparation and eating, especially during celebrations, highlights the importance of unity and togetherness in Nigerian society.
+                </p>
+                <p>
+                    From the staple dishes like jollof rice and pounded yam to the street food favorites like suya and moi moi, Nigerian cuisine is characterized by its bold flavors, diverse ingredients, and unique cooking techniques.
+                </p>
+                <p>
+                    If you are looking for a truly authentic and unforgettable taste of Nigeria, be sure to try the delicious and culturally significant dishes that make up this rich and vibrant cuisine. Whether enjoyed at home, in a restaurant, or at a street food stall, Nigerian food is a delicious expression of the country's unique history. Take a moment to appreciate the cultural significance behind every bite.
+                </p>
+                <p class="pgreen"> <strong> Keep scrolling to learn more about some tasty Nigerian recipes!</strong>
+                </p>
+            </div>
+            <div class="related-posts">
+                <h2>Recent Posts</h2>
+                <ul>
+                    <li><a href="#">How to Make the Tastiest Jollof Rice</a></li>
+                    <li><a href="#">Easy Guide for Making Akara</a></li>
+                    <li><a href="#">Delicious and Easy Boli and Shaki</a></li>
+                    <li><a href="#">Easy Homemade Moi Moi</a></li>
+                    <li><a href="#">Top 10 Nigerian Cuisine Restaurants in the U.S.!</a></li>
+                </ul>
+        </div>
+        </div>
+        </section>
+    </main>
+    <hr style="border-top: 1.5px solid yellow;">
+    <br>
+<section>
+    <div class="related-articles">
+        <div class="article">
+            <img src="../siteimages/14692608750_3684cbeb5e_b.jpg" alt="pounded yam and egusi soup in a bowl" width="175" height="185">
+            <h2>Easy Homemade Pounded Yam and Egusi Soup!</h2>
+            <p>A staple dish in Nigeria, made from yam, ground melon seeds. palm oil vegetables, and spices. It is a hearty and filling dish that is commonly served at… </p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="../siteimages/1077035.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/59439copy.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/51613572767cozydzabu1copy.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/11594987359wsqhsnkcgecopy.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/5a4e2ef62da5ad73df7efe6ecopy.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-iconz"><img src="../siteimages/avd5c445f01ca4712be88.png" alt="Share via Email"></a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../siteimages/24Nigerian4-promo-superJumbo-v2.jpg" alt="beef suya covered in spices, onions, and red peppers" width="175" height="185">
+            <h2>How to Make the Most Flavorful Suya!</h2>
+            <p>A popular street food made from thin slices of meat (usually chicken or beef) that are marinated in spices and grilled over hot coals…</p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="../siteimages/1077035.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/59439copy.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/51613572767cozydzabu1copy.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/11594987359wsqhsnkcgecopy.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/5a4e2ef62da5ad73df7efe6ecopy.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-iconz"><img src="../siteimages/avd5c445f01ca4712be88.png" alt="Share via Email"></a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../siteimages/IMG_5737.jpg" alt="front of restaurant Miya Lounge in Beltsville, MD" width="175" height="185">
+            <h2>Miya Lounge, located in Beltsville Maryland</h2>
+            <p>Nigerian restaurants in America offer a taste of authentic Nigerian cuisine, which is characterized by bold and ravorful spices, savory stews, and…</p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="../siteimages/1077035.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/59439copy.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/51613572767cozydzabu1copy.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/11594987359wsqhsnkcgecopy.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/5a4e2ef62da5ad73df7efe6ecopy.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-iconz"><img src="../siteimages/avd5c445f01ca4712be88.png" alt="Share via Email"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<button class="load-more-btn" style="text-align: center;">Load More Posts</button>
+<div class="bottomsearch">
+    <input type="text" placeholder="Type and hit enter...">
+</div>
+
+   
+    <hr style="border-top: 1.5px solid yellow;">
+    <footer>
+        <h2 class="subby">SUBSCRIBE TO MY NEWSLETTER!</h2>
+        <p><em> Let's connect! You won't want to miss out on any new blog posts. Stay up-to-date with the latest Nigerian food news, recipes, and tips.</em> </p>
+        <div class="subscribe-form">
+            <input type="text" placeholder="Enter your email" class="subscribe-input">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+          <br>
+        <p class="copyr">&copy; 2023 NaijaFlavor. All rights reserved.</p>
+      </footer>
+</body>
+</html>

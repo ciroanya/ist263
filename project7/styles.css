@@ -1,0 +1,179 @@
+/* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #333;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #000;
+  }
+  
+  /* Header Styles */
+  
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid green;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  .logo {
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 5px 10px;
+  }
+  
+  nav {
+    float: right;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  
+  nav a {
+    display: block;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .search {
+    float: right;
+    margin-top: 10px;
+  }
+  
+  /* Main Content Styles */
+  
+  .main {
+    margin-top: 80px;
+    padding: 20px;
+  }
+  
+  .intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .intro img {
+    max-width: 50%;
+    margin-right: 20px;
+  }
+  
+  .teaser {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+  
+  .teaser article {
+    flex-basis: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .teaser article:last-child {
+    margin-right: 0;
+  }
+  
+  .teaser img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  /* Sidebar Styles */
+  
+  .sidebar {
+    float: right;
+    width: 30%;
+    margin-top: 80px;
+    padding-left: 20px;
+  }
+  
+  .related {
+    margin-bottom: 20px;
+  }
+  
+  .related h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .related li {
+    margin-bottom: 10px;
+  }
+  
+  .related a {
+    color: #333;
+  }
+  
+  /* Footer Styles */
+  
+  footer {
+    background-color: green;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .subscribe {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .subscribe h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe p {
+    margin-bottom: 20px;
+  }
+  
+  .subscribe input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+  }
+  
+  .subscribe input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    font-size:large}  
