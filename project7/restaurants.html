@@ -5,113 +5,504 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NaijaFlavor Restaurant Recommendations</title>
+    <style>
+       /* Style for navigation bar */
+       nav {
+                background-color: white;
+                border: 2px solid yellow;
+                color: black;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                padding: 5px;
+        }
+
+        nav ul {
+                display: flex;
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+        }
+        nav li {
+                margin-right: 20px;
+                position: relative;
+        }
+        nav li a {
+                color: #000000;
+                display: block;
+                padding: 10px;
+                text-decoration: none;
+                letter-spacing: 2px;
+                font-weight: bold;
+                transition: all 0.3s ease-in-out;
+                }
+        nav li a:hover {
+                background-color: yellow;
+                color: #ffffff;
+                }
+        nav ul ul {
+                display: none;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                background-color: yellow;
+                padding: 0;
+                box-shadow: 0 4px 4px rgba(0,0,0,0.2);
+        }
+        nav ul ul li {
+                margin-right: 0;
+                width: 200px;
+                border-bottom: 1px solid #fff;
+        }
+        nav ul ul li:last-child {
+                border-bottom: none;
+        }
+        nav ul ul li a {
+                        color: #000000;
+                        display: block;
+                        padding: 10px;
+                        text-decoration: none;
+                        font-weight: normal;
+                        transition: all 0.3s ease-in-out;
+                }
+                nav ul ul li a:hover {
+                        background-color: green;
+                        color: #ffffff;
+                }
+        nav li:hover > ul {
+                display: block;
+        }
+        h1, h2 {color: green;}
+        .logo {
+                        float: left;
+                }
+        .search {
+                        float: right;
+                }
+                .search input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
+
+                .search input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
+                body {
+                        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                        font-size: 16px;
+                        line-height: 1.5;
+                }
+
+                .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFE0;
+  border-top: 2px solid yellow;
+  border-bottom: 2px solid yellow;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.prev-button, .next-button {
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 1px;
+}
+
+.arrow {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+
+.next-button {
+  margin-left: auto;
+}
+
+.next-button .arrow {
+  margin-left: 10px;
+}
+
+/* Optional: Hover styles */
+.prev-button:hover, .next-button:hover {
+  background-color: #FFD700;
+  color: #FFF;
+}
+
+
+.social-share {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-share a {
+  display: flex;
+  align-items:flex-start;
+  width: 95px;
+  height: 95px;
+
+}
+
+.social-share a:hover {
+  opacity: 0.8;
+}
+
+.social-share img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.titl {font-size: 29px;}
+
+.highlight {
+  color: yellow;
+  font-weight: bold;
+  font-size: larger;
+}
+
+ol li a {
+  font-weight: bold;
+  color: green;
+  font-size: 20px;
+}
+.related-articles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.article {
+  width: 300px;
+  margin-right: 20px;
+  text-align: center;
+  display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+}
+
+.article:last-child {
+  margin-right: 0;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+}
+
+.article h2 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.article p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.article .button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.article .share {
+  margin-top: 10px;
+}
+
+.article .share-icon {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.article .share-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.article .share-iconz img {
+    width: 30px;
+  height: 30px; 
+}
+.load-more-btn {
+			display: block;
+			background-color: white;
+			color: rgb(77, 77, 77);
+			padding: 10px;
+			border: 2px solid yellow;
+			border-radius: 5px;
+			font-weight: bold;
+			margin: 20px auto;
+			cursor: pointer;}
+            .bottomsearch {
+                display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 20px 0;
+                }
+                .bottomsearch input[type="text"] {
+                        padding: 8px;
+                        border: none;
+                        border-radius: 20px;
+                        background-color: #fff;
+                        box-shadow: 0 2px 2px yellow;
+                        transition: all 0.2s ease-in-out;
+                        width: 200px;
+                }
+
+                .bottomsearch input[type="text"]:focus {
+                        width: 300px;
+                        outline: none;
+                }
+                footer {
+			background-color: green;
+			color: white;
+			text-align: center;
+			padding: 50px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		}
+        .subby {color: #fff;}
+        .copyr {float: left;
+        color: white;
+        font-size: 12px;}
+
+        .subscribe-form {
+			display: inline-block;
+			background-color: #e0e0e0;
+			border-radius: 20px;
+			padding: 10px;
+		}
+
+		.subscribe-input {
+			display: inline-block;
+			padding: 5px;
+			border: none;
+			border-radius: 5px;
+			margin-right: 10px;
+			width: 200px;
+		}
+
+		.subscribe-btn {
+			display: inline-block;
+			background-color: black;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			font-weight: bold;
+			cursor: pointer;
+		}
+
+    .related-articles a:hover {
+                        color: #fbb600;}
+
+    </style>
 </head>
 <body>
     <header>
-        <h1> Explore NaijaFlavor</h1>
-        <nav>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="recipes.html">Recipes</a></li>
-              <li><a href="restaurants.html">Restaurants to Visit</a></li>
-            </ul>
-          </nav>
+      <div class="header-wrapper">
+        <div class="logo">
+          <a href="index.html"><img src="../siteimages/naijaflavorlogo.png" alt="NaijaFlavor logo" width="108"></a>
+        </div>
+        <br>
+        <div class="search">
+              <input type="text" placeholder="Search...">
+        </div>
+    </div>
+
+    <h1> Explore NaijaFlavor</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>  
+            <li>
+                <a href="recipes.html">RECIPES</a>
+                <ul>
+                    <li><a href="#">Jollof Rice</a></li>
+                    <li><a href="#">Pounded Yam and Egusi Soup</a></li>
+                    <li><a href="#">Afang Soup</a></li>
+                    <li><a href="#">Boli and Shaki</a></li>
+                    <li><a href="#">Akara</a></li>
+                    <li><a href="#">Suya</a></li> 
+                    <li><a href="#">Plantain Porridge</a></li>
+                    <li><a href="#">Moi Moi</a></li>
+                    <li><a href="#">Chin Chin</a></li>
+                    <li><a href="#">Puff Puff</a></li>
+                </ul>
+            </li>
+            <li><a href="restaurants.html">RESTAURANTS TO VISIT</a></li>
+        </ul>
+    </nav>
     </header>
+    <br>
     <main>
-        <h1>Bringing Naija Cuisine to the States</h1>
-        <img src="../siteimages/Jollof_rice_and_chicken.jpg" alt="red jollof rice and chicken leg" width="320">
+      <div class="button-container">
+        <a href="#" class="prev-button"><span class="arrow">&#x2190;</span> Previous Article</a>
+        <a href="#" class="next-button">Next Article <span class="arrow">&rarr;</span></a>
+      </div>
+      
+      <div class="social-share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.example.com/article.html" class="facebook-share" target="_blank">
+          <img src="../siteimages/faceshare.png" alt="Share on Facebook" />
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=https://www.example.com/article.html&text=Check out this article" class="twitter-share" target="_blank">
+          <img src="../siteimages/twitshare.png" alt="Share on Twitter" />
+        </a>
+        <a href="https://pinterest.com/pin/create/button/?url=https://www.example.com/article.html&media=https://www.example.com/images/article.jpg&description=Check+out+this+article" class="pinterest-share" target="_blank">
+          <img src="../siteimages/pinshare.png" alt="Share on Pinterest" />
+        </a>
+      </div>
+      
+
+
+        <h1 class="titl">Bringing Naija Cuisine to the States</h1>
+        <img src="../siteimages/Screenshot-2023-01-15-at-12.04.02-pm.png" alt="red jollof rice and chicken leg" width="520">
         <p>
         There are several reasons why people should consider visiting Nigerian restaurants in America:
         </p>
         <ul>
-            <li>Authentic Cuisine: Nigerian restaurants in America offer a taste of authentic Nigerian cuisine, which is characterized by bold and flavorful spices, savory stews, and delicious soups. The dishes are made with traditional ingredients and cooking methods, allowing customers to experience the true flavors of Nigeria!</li>
+            <li><span class="highlight">Authentic Cuisine:</span> Nigerian restaurants in America offer a taste of authentic Nigerian cuisine, which is characterized by bold and flavorful spices, savory stews, and delicious soups. The dishes are made with traditional ingredients and cooking methods, allowing customers to experience the true flavors of Nigeria!</li>
             <br>
-            <img src="../siteimages/african-woman-cooking-traditional-food-street_21730-14557.jpg" alt="african woman cooking traditonal food outside" width="320">
+            <img src="../siteimages/african-woman-cooking-traditional-food-street_21730-14557.jpg" alt="african woman cooking traditonal food outside" width="340" height="250">
             <br>
-            <li>New and Exciting Flavors: For those looking to try something new and exciting, Nigerian cuisine offers a unique and delicious flavor profile that is unlike anything else. From spicy stews to savory soups and sauces, there is something for everyone to enjoy.</li>
+            <li><span class="highlight">New and Exciting Flavors:</span> For those looking to try something new and exciting, Nigerian cuisine offers a unique and delicious flavor profile that is unlike anything else. From spicy stews to savory soups and sauces, there is something for everyone to enjoy.</li>
             <br>
-            <img src="../siteimages/jason-leung-2IaZGfBKgMY-unsplash.jpg" alt="various spices in bowls which are used in nigerian food" width="320">
+            <img src="../siteimages/jason-leung-2IaZGfBKgMY-unsplash.jpg" alt="various spices in bowls which are used in nigerian food"  width="340" height="250">
             <br>
-            <li>Support Local Businesses: By visiting Nigerian restaurants, you are supporting local small businesses and helping to preserve and promote Nigerian culture in the United States.</li>
+            <li><span class="highlight">Support Local Businesses:</span> By visiting Nigerian restaurants, you are supporting local small businesses and helping to preserve and promote Nigerian culture in the United States.</li>
             <br>
-            <img src="../siteimages/Saymama-About-Us-image.jpg" alt="people in nigerian food buffet line" width="320">
+            <img src="../siteimages/Saymama-About-Us-image-copy.png" alt="people in nigerian food buffet line" width="340" height="250">
             <br>
           </ul>
-         
+    
           <p><strong>In no particular order, here are a list of 10 amazing Nigerian restaurants to try in the United States!</strong></p>
+          <br>
           <ol>
-            <img src="../siteimages/2022-02-23.png" alt="dining area in Olaide's Kitchen restaurant" width="320"> <br>
-            <li><a href="https://www.olaideskitchen.com/">Olaide's Kitchen, located in Parlin, New Jersey</a></li>
-            <p>Olaide's kitchen started as a catering business that operated out of chef Olaide's home kitchen. 18 years later, it expanded into the restaurant space. But not only is it a restaurant, it's an experience. Get inspired while you dine  alongside their African art gallery. Check out the elevated, yet authentic Nigerian dishes, like the Giz Dodo - sauteed gizzards and plantains infused with herbs and peppers - or the Efo Elegusi, a flavorful kale and pumpkin seed (egusi) stew cooked in palm oil.</p>
-            <img src="../siteimages/bd9a3c68-bc8c-4576-b55a-46feea7db68e.jpg" alt="front of Jollof Rice King restaurant in shopping plaza" width="320"> <br>
-            <li><a href="https://jollofriceking.com/">Jollof Rice King, located in Houston, Texas</a></li>
-            <p>With a bold storefront decked out in red and yellow, Jollof Rice King's aesthetic is as enticing as its flavors. While the restaurant is more of a grab and go style eatery, Jollof Rice King's menu is no less ambitious than the restaurants that preceded it. Suya — a broiled beef or chicken skewer — served with jollof rice and plantains, barbecued goat meat served with rice, and numerous pepper soups filled with protein like whiting, croaker fish, or chicken, are on the menu. And of course, there will be plenty of jollof rice!</p>
-            <img src="../siteimages/o.jpg" alt="front of Veronica's Kitchen" width="320"> <br>
-            <li><a href="https://veronicaskitchen.hrpos.heartland.us/menu">Veronica's Kitchen, located in Inglewood, California</a></li>
-            <p>A bright-yet-casual cafe preparing Nigerian specialties like fufu, pepper soup & jollof rice. A meal at Veronica's feels like you're eating inside someone's house, not an actual restaurant. Whether you're familiar with Nigerian cuisine or not, your first order of business here needs to be the egusi. It's a rich, fragrant stew made from dried melon seeds, pumpkin leaves, palm oil, onions, and your choice of protein on top.</p>
-            <img src="../siteimages/2017-10-20.jpg" alt="front of yellow restaurant" width="320"><br>
-            <li><a href="http://www.appiooafricanbargrill.com/"> Appioo Bar and Grill, located in Washington, DC</a></li>
-            <p>Although owner and chef Prince Matey introduced two new dishes that he developed early in the COVID quarantine - a minced goat burger and seafood okra stew - his clients still love the staples. That includes light pepper soup with fufu and meat or fish, waakye (black eyed peas cooked with brown rice) served with black pepper sauce (Shinto) and ampesi (boiled yam and boiled green plantain) served with spinach stew. And, of course, jollof rice.</p>
-            <img src="../siteimages/2019-10-24.jpg" alt="dining area of restaurant" width="320"><br>
-            <li><a href="https://www.brooklynsuya.com/"> Brooklyn Suya, located in Brooklyn, New York</a></li>
-            <p>Brooklyn Suya brings fast casual West African dining to the States. Build your own suya bowl with a choice of meat/protein; add ons like avocado, egg, kale, plantain, mushrooms, eggplant, and vegetables; a base of either rice or kale; and mild, medium or spicy sauce. But the star of every bowl is the suya spice mix, which consists of peanuts, various aromatics, and ground up peppers.</p>
-            <img src="../siteimages/imagez.jpg" alt="dining area of restaurant" width="320"><br>
-            <li><a href="https://www.yelp.com/biz/abeke-s-kitchen-philadelphia">Abeke's Kitchen, located in Philadelphia, Pennsylvania</a></li>
-            <p>This African restaurant is a perfect location to loosen up as well as dine in with your friends or loved ones. Its excellent customer service and many delicious West African foods are something that makes the restaurant stand out from the rest! The overall ambience of the restaurant is very warm and welcoming, and it is for sure that you are going to love your time there.</p>
-            <img src="../siteimages/Taste_of_Nigeria.0.jpg" alt="front doors of restaurant with logo in sight" width="320"> <br>
-            <li><a href="https://tasteofnigeria.us/">Taste of Nigeria, located in Houston, Texas</a></li>
-           <p>This Houston-based establishment is one of just a few restaurants filling the void for authentic Nigerian food in the H. The Odewales use the freshest ingredients to prepare appetizers like Isiewu, a spicy diced goat head served in a thick sauce, and main dishes like Banga soup, a palm nut soup made with beef, dry fish, and crayfish. Taste of Nigeria boasts over a dozen menu options and offers delivery and catering services.</p>
-           <img src="../siteimages/ozz.jpg" alt="dining area of restaurant with yellow bus seating area" width="320"><br>
-            <li><a href="https://www.bukanewyork.com/">Buka, located in New York City, New York</a></li>
-           <p>At Buka in Brooklyn, New York, diners will find "good old-fashioned Naija cooking" for delivery and curbside pickup. For dinner, try the Edikaikong, goat and tripe meat cooked in spinach with crayfish, dried shrimp and periwinkle, with fufu on the side. Wash down the filling meal with a glass of Zobo, Nigerian hibiscus iced tea.</p>
-           <img src="../siteimages/IMG_20200724_122049.jpg" alt="front of Cafe Songhai restaurant in shopping plaza" width="320"><br>
-            <li><a href="https://cafesonghai.com/">Cafe Songhai, located in Atlanta, Georgia</a></li>
-           <p>If you're seeking authentic West African cuisine representing Nigeria, Ghana, and the Ivory Coast, in Peachtree Corners, Georgia, Cafe Songhai is the place to pick up takeout. There are traditional Nigerian selections such as egusi soup; Ghanaian food such as Kelewele, deep-fried, lightly spiced, diced sweet plantain; and Ivory Coast fare Attiéké, ground cassava, servedwith fried tilapia fillet or red snapper.</p>
-           <img src="../siteimages/IMG_5737.jpg" alt="front of restaurant Miya Lounge in Beltsville, MD" width="320"><br>
-            <li><a href="https://www.miyalounge.com/"> Miya Lounge, located in Beltsville, Maryland</a></li>
+            <img src="../siteimages/2022-02-23.png" alt="dining area in Olaide's Kitchen restaurant" width="450" height="260"> <br>
+            <li><a href="https://www.olaideskitchen.com/" target="_blank">Olaide's Kitchen, located in Parlin, New Jersey</a></li>
+            <p>Olaide's kitchen started as a catering business that operated out of chef Olaide's home kitchen. 18 years later, it expanded into the restaurant space. But not only is it a restaurant, it's an experience. Get inspired while you dine  alongside their African art gallery. Check out the elevated, yet authentic Nigerian dishes, like the Giz Dodo - sauteed gizzards and plantains infused with herbs and peppers - or the Efo Elegusi, a flavorful kale and pumpkin seed (egusi) stew cooked in palm oil.</p><br>
+
+            <img src="../siteimages/bd9a3c68-bc8c-4576-b55a-46feea7db68e.jpg" alt="front of Jollof Rice King restaurant in shopping plaza" width="450" height="260"> <br>
+            <li><a href="https://jollofriceking.com/"  target="_blank">Jollof Rice King, located in Houston, Texas</a></li>
+            <p>With a bold storefront decked out in red and yellow, Jollof Rice King's aesthetic is as enticing as its flavors. While the restaurant is more of a grab and go style eatery, Jollof Rice King's menu is no less ambitious than the restaurants that preceded it. Suya — a broiled beef or chicken skewer — served with jollof rice and plantains, barbecued goat meat served with rice, and numerous pepper soups filled with protein like whiting, croaker fish, or chicken, are on the menu. And of course, there will be plenty of jollof rice!</p><br>
+
+            <img src="../siteimages/o.jpg" alt="front of Veronica's Kitchen" width="450" height="260"> <br>
+            <li><a href="https://veronicaskitchen.hrpos.heartland.us/menu" target="_blank">Veronica's Kitchen, located in Inglewood, California</a></li>
+            <p>A bright-yet-casual cafe preparing Nigerian specialties like fufu, pepper soup & jollof rice. A meal at Veronica's feels like you're eating inside someone's house, not an actual restaurant. Whether you're familiar with Nigerian cuisine or not, your first order of business here needs to be the egusi. It's a rich, fragrant stew made from dried melon seeds, pumpkin leaves, palm oil, onions, and your choice of protein on top.</p><br>
+
+            <img src="../siteimages/2017-10-20.jpg" alt="front of yellow restaurant" width="450" height="260"><br>
+            <li><a href="http://www.appiooafricanbargrill.com/" target="_blank"> Appioo Bar and Grill, located in Washington, DC</a></li>
+            <p>Although owner and chef Prince Matey introduced two new dishes that he developed early in the COVID quarantine - a minced goat burger and seafood okra stew - his clients still love the staples. That includes light pepper soup with fufu and meat or fish, waakye (black eyed peas cooked with brown rice) served with black pepper sauce (Shinto) and ampesi (boiled yam and boiled green plantain) served with spinach stew. And, of course, jollof rice.</p><br>
+
+            <img src="../siteimages/2019-10-24.jpg" alt="dining area of restaurant" width="450" height="260"><br>
+            <li><a href="https://www.brooklynsuya.com/" target="_blank"> Brooklyn Suya, located in Brooklyn, New York</a></li>
+            <p>Brooklyn Suya brings fast casual West African dining to the States. Build your own suya bowl with a choice of meat/protein; add ons like avocado, egg, kale, plantain, mushrooms, eggplant, and vegetables; a base of either rice or kale; and mild, medium or spicy sauce. But the star of every bowl is the suya spice mix, which consists of peanuts, various aromatics, and ground up peppers.</p><br>
+
+            <img src="../siteimages/imagez.jpg" alt="dining area of restaurant"  width="450" height="260"><br>
+            <li><a href="https://www.yelp.com/biz/abeke-s-kitchen-philadelphia" target="_blank">Abeke's Kitchen, located in Philadelphia, Pennsylvania</a></li>
+            <p>This African restaurant is a perfect location to loosen up as well as dine in with your friends or loved ones. Its excellent customer service and many delicious West African foods are something that makes the restaurant stand out from the rest! The overall ambience of the restaurant is very warm and welcoming, and it is for sure that you are going to love your time there.</p><br>
+
+            <img src="../siteimages/Taste_of_Nigeria.0.jpg" alt="front doors of restaurant with logo in sight" width="450" height="260"> <br>
+            <li><a href="https://tasteofnigeria.us/" target="_blank">Taste of Nigeria, located in Houston, Texas</a></li>
+           <p>This Houston-based establishment is one of just a few restaurants filling the void for authentic Nigerian food in the H. The Odewales use the freshest ingredients to prepare appetizers like Isiewu, a spicy diced goat head served in a thick sauce, and main dishes like Banga soup, a palm nut soup made with beef, dry fish, and crayfish. Taste of Nigeria boasts over a dozen menu options and offers delivery and catering services.</p><br>
+
+           <img src="../siteimages/BukaInterior.jpg" alt="dining area of restaurant" width="450" height="260"><br>
+            <li><a href="https://www.bukanewyork.com/" target="_blank">Buka, located in New York City, New York</a></li>
+           <p>At Buka in Brooklyn, New York, diners will find "good old-fashioned Naija cooking" for delivery and curbside pickup. For dinner, try the Edikaikong, goat and tripe meat cooked in spinach with crayfish, dried shrimp and periwinkle, with fufu on the side. Wash down the filling meal with a glass of Zobo, Nigerian hibiscus iced tea.</p><br>
+
+           <img src="../siteimages/IMG_20200724_122049.jpg" alt="front of Cafe Songhai restaurant in shopping plaza" width="450" height="260"><br>
+            <li><a href="https://cafesonghai.com/" target="_blank">Cafe Songhai, located in Atlanta, Georgia</a></li>
+           <p>If you're seeking authentic West African cuisine representing Nigeria, Ghana, and the Ivory Coast, in Peachtree Corners, Georgia, Cafe Songhai is the place to pick up takeout. There are traditional Nigerian selections such as egusi soup; Ghanaian food such as Kelewele, deep-fried, lightly spiced, diced sweet plantain; and Ivory Coast fare Attiéké, ground cassava, servedwith fried tilapia fillet or red snapper.</p><br>
+
+           <img src="../siteimages/IMG_5737.jpg" alt="front of restaurant Miya Lounge in Beltsville, MD" width="450" height="260"><br>
+            <li><a href="https://www.miyalounge.com/" target="_blank"> Miya Lounge, located in Beltsville, Maryland</a></li>
             <p>If you are looking forward to experiencing unique culinary cuisine, look no further. Miya is a family owned restaurant and their mission is to unite families and cultures together through African cuisine and art. Although the restaurant is quite small, the ambience is very beautiful and welcoming. So, if you're planning brunch with friends and family, this African restaurant is ideal to visit.</p>
         </ol>
         <br>
     </main>
+    <hr style="border-top: 1.5px solid yellow;">
+    <br>
     <section>
-        <h2>Related Articles</h2>
-        <article>
-            <img src="../siteimages/14692608750_3684cbeb5e_b.jpg" alt="pounded yam and egusi soup in a bowl" width="320">
-            <h3>Easy Homemade Pounded Yam and Egusi Soup!</h3>
-            <a href="#">Read More</a>
-          </article>
-          <article>
-            <img src="../siteimages/24Nigerian4-promo-superJumbo-v2.jpg" alt="beef suya covered in spices, onions, and red peppers" width="320">
-            <h3>How to Make the Most Flavorful Suya!</h3>
-            <a href="#">Read More</a>
-          </article>
-          <article>
-            <img src="../siteimages/pexels-photo-13988921.jpeg" alt="chin chin in basket" width="320">
-            <h3>Delicious Guide for Chin Chin!</h3>
-            <a href="#">Read More</a>
-          </article>
-    </section>
-    <aside>
-        <h2>Related Posts</h2>
-        <ul>
-            <li><a href="#">How to Make the Tastiest Jollof Rice</a></li>
-            <li><a href="#">Easy Guide for Making Akara</a></li>
-            <li><a href="#">Delicious and Easy Boli and Shaki</a></li>
-            <li><a href="#">Easy Homemade Moi Moi</a></li>
-            <li><a href="#">Top 10 Nigerian Cuisine Restaurants in the U.S.!</a></li>
-        </ul>
-    </aside>
-    <section>
-        <h2>STAY TUNED</h2>
-        <p>Subscribe to my Newsletter for new blog posts, recipes, tips, and new photos. Let's stay connected!</p>
-        <form>
-            <label for="email">Enter your email:</label>
-            <input type="email" id="email" name="email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+      <div class="related-articles">
+        <div class="article">
+            <img src="../siteimages/image-24.jpg" alt="pounded yam and egusi soup in a bowl" width="175" height="185">
+            <h2>Easy Homemade Pounded Yam and Egusi Soup!</h2>
+            <p>A staple dish in Nigeria, made from yam, ground melon seeds. palm oil vegetables, and spices. It is a hearty and filling dish that is commonly served at… </p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="../siteimages/1077035.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/59439copy.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/51613572767cozydzabu1copy.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/11594987359wsqhsnkcgecopy.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/5a4e2ef62da5ad73df7efe6ecopy.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-iconz"><img src="../siteimages/avd5c445f01ca4712be88.png" alt="Share via Email"></a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../siteimages/24Nigerian4-promo-superJumbo-v2.jpg" alt="beef suya covered in spices, onions, and red peppers" width="175" height="185">
+            <h2>How to Make the Most Flavorful Suya!</h2>
+            <p>A popular street food made from thin slices of meat (usually chicken or beef) that are marinated in spices and grilled over hot coals…</p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="../siteimages/1077035.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/59439copy.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/51613572767cozydzabu1copy.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/11594987359wsqhsnkcgecopy.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/5a4e2ef62da5ad73df7efe6ecopy.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-iconz"><img src="../siteimages/avd5c445f01ca4712be88.png" alt="Share via Email"></a>
+            </div>
+        </div>
+        <div class="article">
+            <img src="../siteimages/c6cbdc3b-1e10-4260-8cdf-b99d6689eb33.jpeg" alt="chin chin in basket" width="175" height="185">
+            <h2>Delicious Guide for Chin Chin!</h2>
+            <p>Chin Chin is a delightfully tasty crunchy snack! While this snack is commonly enjoyed in Nigeria, not all chin chins are made equal. Some taste…</p>
+            <a href="#" class="button">READ MORE</a>
+            <div class="share">
+                <a href="#" class="share-icon"><img src="../siteimages/1077035.png" alt="Favorite the article"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/59439copy.png" alt="Share via Facebook"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/51613572767cozydzabu1copy.png" alt="Share via Twitter"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/11594987359wsqhsnkcgecopy.png" alt="Share on Pinterest"></a>
+                <a href="#" class="share-icon"><img src="../siteimages/5a4e2ef62da5ad73df7efe6ecopy.png" alt="Share via Text Message"></a>
+                <a href="#" class="share-iconz"><img src="../siteimages/avd5c445f01ca4712be88.png" alt="Share via Email"></a>
+            </div>
+        </div>
+    </div>
+</section>
+<button class="load-more-btn" style="text-align: center;">Load More Posts</button>
+<div class="bottomsearch">
+    <input type="text" placeholder="Type and hit enter...">
+</div>
+    
     <footer>
-        <p>&copy; 2023 NaijaFlavor. All rights reserved.</p>
+        <h2 class="subby">SUBSCRIBE TO MY NEWSLETTER!</h2>
+        <p><em> Let's connect! You won't want to miss out on any new blog posts. Stay up-to-date with the latest Nigerian food news, recipes, and tips.</em> </p>
+        <div class="subscribe-form">
+            <input type="text" placeholder="Enter your email" class="subscribe-input">
+            <button class="subscribe-btn">Subscribe</button>
+          </div>
+          <br>
+          <br>
+        <p class="copyr">&copy; 2023 NaijaFlavor. All rights reserved.</p>
       </footer>
+
+   
 </body>
 </html>

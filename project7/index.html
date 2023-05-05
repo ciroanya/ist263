@@ -120,6 +120,7 @@
                         flex-basis: 33.333%;
                         padding-left: 1px;
                         box-sizing: border-box;
+                  
                 }
 
                 .intro-paragraph h2 {
@@ -230,6 +231,10 @@
 			font-weight: bold;
 			margin: 20px auto;
 			cursor: pointer;}
+
+            .load-more-btn :hover{
+                        color: darkgray;}
+
             .bottomsearch {
                 display: flex;
 			align-items: center;
@@ -288,14 +293,16 @@
 			font-weight: bold;
 			cursor: pointer;
 		}
+      
 
+      
 </style>
 </head>
 <body>
     <header>
         <div class="header-wrapper">
             <div class="logo">
-              <a href="#"><img src="../siteimages/naijaflavorlogo.png" alt="NaijaFlavor logo" width="108"></a>
+              <a href="index.html"><img src="../siteimages/naijaflavorlogo.png" alt="NaijaFlavor logo" width="108"></a>
             </div>
             <br>
             <div class="search">
@@ -332,7 +339,7 @@
         <section class="intro">
         <div class="container">
             <div class="intro-image">
-                <img src="../siteimages/thumbnailofme_IMG_4533.jpg" alt="celeste iroanya smiling" width="300">
+                <img src="../siteimages/thumbnailofme_IMG_4533.jpg" alt="celeste iroanya smiling" width="275">
             </div>
             <div class="intro-paragraph">
                 <h2>Nigeria on a Plate</h2>
@@ -351,16 +358,16 @@
                 <p class="pgreen"> <strong> Keep scrolling to learn more about some tasty Nigerian recipes!</strong>
                 </p>
             </div>
-            <div class="related-posts" style="text-align: justify;">
+            <div class="related-posts">
                 <h2>Recent Posts</h2>
-                <ul>
+                <ul class="my-list">
                     <li><a href="#">How to Make the Tastiest Jollof Rice</a></li>
                     <li><a href="#">Easy Guide for Making Akara</a></li>
                     <li><a href="#">Delicious and Easy Boli and Shaki</a></li>
                     <li><a href="#">Easy Homemade Moi Moi</a></li>
                     <li><a href="#">Top 10 Nigerian Cuisine Restaurants in the U.S.!</a></li>
                 </ul>
-        </div>
+            </div>
         </div>
         </section>
     </main>
@@ -418,7 +425,7 @@
 </div>
 
    
-    <hr style="border-top: 1.5px solid yellow;">
+    
     <footer>
         <h2 class="subby">SUBSCRIBE TO MY NEWSLETTER!</h2>
         <p><em> Let's connect! You won't want to miss out on any new blog posts. Stay up-to-date with the latest Nigerian food news, recipes, and tips.</em> </p>
@@ -426,6 +433,7 @@
             <input type="text" placeholder="Enter your email" class="subscribe-input">
             <button class="subscribe-btn">Subscribe</button>
           </div>
+          <br>
           <br>
         <p class="copyr">&copy; 2023 NaijaFlavor. All rights reserved.</p>
       </footer>
